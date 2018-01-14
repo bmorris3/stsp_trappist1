@@ -1,0 +1,35 @@
+#PLANET PROPERTIES
+1							; Number of planets -- (if there are more than 1 planet, then the set of 8 planet properties are repeated)
+2454605.8914623754					; T0, epoch         (middle of first transit) in days.
+4.8878025844				; Planet Period      (days)
+0.0034024245				; (Rp/Rs)^2         (Rplanet / Rstar )^ 2
+0.0979730660			; Duration (days)   (physical duration of transit, not used)
+10					; Impact parameter  (0= planet cross over equator)
+0			; Inclination angle of orbit (90 deg = planet crosses over equator)
+0.0000000000					; Lambda of orbit (0 deg = orbital axis along z-axis)
+0.000000			; ecosw
+0.000000			; esinw
+#STAR PROPERTIES
+50.7 			; Mean Stellar density (Msun/Rsun^3)
+3.3			; Stellar Rotation period (days)
+2559					; Stellar Temperature
+0.04					; Stellar metallicity
+0.0000000000						; Tilt of the rotation axis of the star down from z-axis (degrees)
+0.00 0.92 0.00 0.04			; Limb darkening (4 coefficients)
+100			; number of rings for limb darkening appoximation
+#SPOT PROPERTIES
+5 ; n spots
+0.7 ; fractional brightness 
+#LIGHT CURVE
+trappist_rotation.txt			; lightcurve input data file
+2457763.0179528049		; start time to start fitting the light curve
+20.0		; duration of light curve to fit (days)
+1.0000000000		; real maximum of light curve data (corrected for noise), 0 -> use downfrommax
+0						; is light curve flattened (to zero) outside of transits?
+#ACTION
+M						; l= generate light curve from parameters
+74384338 ; random seed
+1.25 ; a scale
+250 ; n chains
+10000 ; n steps
+1.0
